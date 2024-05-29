@@ -2,7 +2,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
   box-sizing: border-box;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -12,11 +11,12 @@
 
 body {
   margin: 0;
+  background: rgb(51, 51, 51);
 }
 
 .container {
   position: relative;
-  max-width: 1280px;
+  padding: 0 6em;
   margin: 0 auto;
 }
 
@@ -27,26 +27,61 @@ body {
 }
 
 a {
-  color: #646cff;
+  color: rgba(255, 255, 255, 0.87);
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
+  text-decoration: inherit;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 50px;
+  border: 2px solid #646cff;
   background-color: #1a1a1a;
   transition: .4s;
+  padding: 10px 30px;
+  cursor: pointer;
 }
 
 button:hover {
   border-color: #646cff;
+  background-color: #272727;
 }
 
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ####### Header Desktop ####### */
+
+@media (min-width:1024px) {
+  #header {
+    background: rgb(12, 12, 12);
+    padding: 20px 0px;
+  }
+
+  #header .row {
+    justify-content: space-between;
+  }
+
+  #header .box-image figure {
+    margin: 0px;
+  }
+
+  #header .box-image figure img {
+    width: 100px;
+    border-radius: 8px;
+  }
+
+  #header .box-clickable {
+    display: flex;
+    gap: 30px;
+  }
+
+  #header .box-clickable .box-click {
+    display: flex;
+    align-items: center;
+  }
 }
